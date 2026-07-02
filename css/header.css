@@ -5,3 +5,7 @@ nav ol li {
 nav ol li:hover {
     color: #c8c4c4;
 }
+
+#mobile-menu {
+    background-color: var(--color-background);
+}
