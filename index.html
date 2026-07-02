@@ -11,8 +11,9 @@
   <body>
     <div class="w-full bg-[var(--color-background)] px-4">
       <header
-        class="relative h-[64px] flex items-center justify-between bg-[var(--color-background)] text-[var(--color-texto)] px-4 z-50"
-      >
+        class="fixed top-0 left-0 w-full h-[64px] flex items-center justify-between bg-[var(--color-background)] text-[var(--color-texto)] px-4 z-50 transition-all duration-300"
+        id="header"
+        >
         <img
           src="assets/icons/cinema-clapperboard-media-svgrepo-com.svg"
           alt="simbolo de cinema"
@@ -88,9 +89,9 @@
           </button>
         </div>
       </header>
-      <main>
-        <div class="hero text-[var(--color-texto)] !ml-0 lg:!ml-8 !mt-24 max-w-[600px] mx-auto lg:mx-0">
-          <h1 class="text-[58px] font-bold !ml-10 lg:!ml-0">
+      <main class="pt-[64px]">
+        <div class="hero text-[var(--color-texto)] !ml-0 lg:!ml-8  max-w-[600px] mx-auto lg:mx-0">
+          <h1 class="text-[58px] font-bold !ml-10 lg:!ml-0 !pt-[14rem]">
             Descubra os seus
             <strong class="text-[var(--color-secundaria)]">filmes</strong>
             favoritos
