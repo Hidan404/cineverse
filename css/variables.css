@@ -10,3 +10,11 @@
     --fonte-principal: 'Poppins', sans-serif;
 }
 
+@theme {
+    --color-background: var(--color-background);
+    --color-cards: var(--color-cards);
+    --color-principal: var(--color-principal);
+    --color-secundaria: var(--color-secundaria);
+    --color-texto: var(--color-texto);
+    --coolor-texto-secundario: var(--color-texto-secundario);
+}
