@@ -11,34 +11,35 @@
   <body>
     <div class="w-full bg-[var(--color-background)] px-4">
       <header
-        class="relative h-[64px] flex items-center justify-between bg-[var(--color-background)] text-[var(--color-texto)] px-4 z-50"
-      >
+        class="fixed top-0 left-0 w-full h-[64px] flex items-center justify-between bg-[var(--color-background)] text-[var(--color-texto)] px-4 z-50 transition-all duration-300"
+        id="header"
+        >
         <img
           src="assets/icons/cinema-clapperboard-media-svgrepo-com.svg"
           alt="simbolo de cinema"
-          class="w-12 h-12"
+          class="w-12 h-12 !ml-[1.2rem]"
         />
 
         <nav class="hidden md:flex items-center gap-6">
           <ol class="flex gap-6 font-medium">
             <li class="cursor-pointer hover:opacity-80 transition-all">Home</li>
             <li class="cursor-pointer hover:opacity-80 transition-all">
-              Featured Movies
+              <a href="#featured-movies">Featured Movies</a>
             </li>
             <li class="cursor-pointer hover:opacity-80 transition-all">
-              Categories
+              <a href="#categories">Categories</a>
             </li>
             <li class="cursor-pointer hover:opacity-80 transition-all">
-              About
+              <a href="#about">About</a>
             </li>
             <li class="cursor-pointer hover:opacity-80 transition-all">
-              Contact
+              <a href="#contact">Contact</a>
             </li>
           </ol>
         </nav>
 
         <button
-          class="hidden md:inline-block !px-6 !py-2 !rounded-2xl bg-[var(--color-principal)] transition-all duration-300 hover:!opacity-80 whitespace-nowrap"
+          class="hidden md:inline-block !mr-[1.2rem] !px-6 !py-2 !rounded-2xl bg-[var(--color-principal)] transition-all duration-300 hover:!opacity-80 whitespace-nowrap"
         >
           Explore Movies →
         </button>
@@ -65,19 +66,19 @@
           <nav>
             <ol class="flex flex-col gap-4 font-medium text-lg text-center">
               <li class="cursor-pointer hover:opacity-80 transition-all">
-                Home
+                <a href="">Home</a>
               </li>
               <li class="cursor-pointer hover:opacity-80 transition-all">
-                Featured Movies
+                <a href="#featured-movies">Featured Movies</a>
               </li>
               <li class="cursor-pointer hover:opacity-80 transition-all">
-                Categories
+                <a href="#categories">Categories</a>
               </li>
               <li class="cursor-pointer hover:opacity-80 transition-all">
-                About
+                <a href="#about">About</a>
               </li>
               <li class="cursor-pointer hover:opacity-80 transition-all">
-                Contact
+                <a href="#contact">Contact</a>
               </li>
             </ol>
           </nav>
@@ -88,25 +89,31 @@
           </button>
         </div>
       </header>
-      <main>
-        <div class="hero text-[var(--color-texto)] !ml-8 !mt-24 max-w-[600px]">
-          <h1 class="text">Descubra os seus <strong>filmes</strong> favoritos</h1>
-          <p>
+      <main class="pt-[64px]">
+        <div class="hero text-[var(--color-texto)] !ml-0 lg:!ml-8  max-w-[600px] mx-auto lg:mx-0">
+          <h1 class="text-[58px] font-bold !ml-10 lg:!ml-0 !pt-[14rem]">
+            Descubra os seus
+            <strong class="text-[var(--color-secundaria)]">filmes</strong>
+            favoritos
+          </h1>
+          <p class="!ml-10 lg:!ml-0  !mt-8 lg:!mt-8 text-[1.4rem] !text-[var(--color-texto-secundario)]">
             Explore recomendações selecionadas, redescubra clássicos atemporais
             e descubra joias escondidas — tudo feito sob medida para o seu
             gosto. Cinema sem limites.
           </p>
-          <div class="botoes flex gap-4 mt-6">
+          <div
+            class="botoes w-auto flex flex-row flex-wrap justify-center lg:!justify-start gap-5 lg:gap-8 !mt-12 w-full items-center"
+          >
             <button
-              class="w-[212px] h-[58px]  bg-[var(--color-principal)] !px-6 !py-2 !rounded-2xl transition-all duration-300 hover:!opacity-80"
+              class="w-full max-w-[250px] h-[58px] font-bold bg-[var(--color-principal)] !px-6 !py-2 !rounded-2xl transition-all duration-300 hover:!opacity-80"
             >
               Explore Filmes →
             </button>
             <button
-              class="w-[212px] h-[58px] flex items-center gap-2 bg-[var(--color-cards)] !px-6 !py-2 !rounded-2xl  transition-all duration-300 hover:!opacity-80"
+              class="w-full max-w-[250px] h-[58px] font-bold flex items-center !justify-center gap-2 bg-[#1C2036]   !rounded-2xl m-auto transition-all duration-300 hover:!opacity-80"
             >
-              <img src="assets/icons/lupa.svg" alt="Lupa">
-              Procure Filmes
+              <img src="assets/icons/lupa.svg" alt="Lupa" class="w-5 h-5" />
+              <span>Procure Filmes</span>
             </button>
           </div>
         </div>
