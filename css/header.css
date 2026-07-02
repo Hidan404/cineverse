@@ -1,0 +1,7 @@
+nav ol li {
+    cursor: pointer;
+
+}
+nav ol li:hover {
+    color: #c8c4c4;
+}
