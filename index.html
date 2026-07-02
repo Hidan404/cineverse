@@ -37,10 +37,8 @@
           </ol>
         </nav>
 
-
         <button
-          class="hidden md:inline-block !px-6 !py-2 !rounded-2xl transition-all duration-300 hover:!opacity-80 whitespace-nowrap"
-          id="background-estilizado "
+          class="hidden md:inline-block !px-6 !py-2 !rounded-2xl bg-[var(--color-principal)] transition-all duration-300 hover:!opacity-80 whitespace-nowrap"
         >
           Explore Movies →
         </button>
@@ -62,7 +60,7 @@
         </button>
         <div
           id="mobile-menu"
-          class="hidden absolute top-[64px] left-0 w-full bg-[#0F172B] border-t border-gray-700/20 flex-col p-6 gap-6 shadow-xl md:hidden"
+          class="hidden absolute top-[64px] left-0 w-full bg-[var] border-t border-gray-700/20 flex-col p-6 gap-6 shadow-xl md:hidden"
         >
           <nav>
             <ol class="flex flex-col gap-4 font-medium text-lg text-center">
@@ -91,14 +89,30 @@
         </div>
       </header>
       <main>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cumque
-        doloremque veritatis, reprehenderit odio nihil illo beatae! Eos vero
-        tenetur, minus nam amet optio vitae hic officiis. Deleniti, architecto
-        minima.
+        <div class="hero text-[var(--color-texto)] !ml-8 !mt-24 max-w-[600px]">
+          <h1 class="text">Descubra os seus <strong>filmes</strong> favoritos</h1>
+          <p>
+            Explore recomendações selecionadas, redescubra clássicos atemporais
+            e descubra joias escondidas — tudo feito sob medida para o seu
+            gosto. Cinema sem limites.
+          </p>
+          <div class="botoes flex gap-4 mt-6">
+            <button
+              class="w-[212px] h-[58px]  bg-[var(--color-principal)] !px-6 !py-2 !rounded-2xl transition-all duration-300 hover:!opacity-80"
+            >
+              Explore Filmes →
+            </button>
+            <button
+              class="w-[212px] h-[58px] flex items-center gap-2 bg-[var(--color-cards)] !px-6 !py-2 !rounded-2xl  transition-all duration-300 hover:!opacity-80"
+            >
+              <img src="assets/icons/lupa.svg" alt="Lupa">
+              Procure Filmes
+            </button>
+          </div>
+        </div>
       </main>
       <footer></footer>
       <script type="module" src="js/main.js"></script>
-      
     </div>
   </body>
 </html>

@@ -6,6 +6,6 @@ nav ol li:hover {
     color: #c8c4c4;
 }
 
-#background-estilizado {
-    background: linear-gradient(90deg, var(--color-principal) 0%, var(--color-secundaria) 100%);
+#mobile-menu {
+    background-color: var(--color-background);
 }
