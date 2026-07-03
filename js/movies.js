@@ -79,7 +79,7 @@ const moviesGrid = document.getElementById("movies-grid")
 
 function createCard(movie){
     const cardd = document.createElement("article")
-    cardd.className = " w-full flex flex-col  bg-[#1E293B] rounded-lg p-4 shadow-md hover:shadow-lg hover:-translate-y-2 transition-shadow duration-300"
+    cardd.className = " w-full flex flex-col  bg-[#1E293B] rounded-lg p-4 shadow-md hover:shadow-lg hover:-translate-y-2 transition-shadow duration-300 cursor-pointer"
     cardd.innerHTML = `
         <img src="${movie.poster}" alt="${movie.title}" class="w-full h-64 object-cover rounded-lg mb-4 overflow-hidden">
         <h3 class="!ml-2 text-xl font-bold text-[var(--color-texto)] !mb-2 !mt-4">${movie.title}</h3>
