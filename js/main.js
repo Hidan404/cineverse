@@ -3,3 +3,7 @@ import { renderMovies } from "./movies.js"
 import { featuredMovies } from "./api.js"
 toggleMenu()
 renderMovies(featuredMovies)
+
+
+
+
