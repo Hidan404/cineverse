@@ -134,8 +134,42 @@
             <div
               id="movies-grid"
               class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 w-[90%] !mx-auto my-auto"
+            ></div>
+          </div>
+        </section>
+        <section id="search-movies">
+          <div
+            id="search"
+            class="w-full max-w-2xl flex flex-col justify-center items-center text-[var(--color-texto)] !mt-34 text-center !mx-auto"
+          >
+            <h2 class="text-[3rem] font-bold !mb-12 !mt-4">
+              Encontre qualquer Filme
+            </h2>
+            <p>
+              Pesquise instantaneamente em nosso banco de dados com milhares de
+              filmes.
+            </p>
+
+            <div
+              class="camp-search w-full flex items-center bg-[#1E293B] border border-gray-700/40 rounded-2xl p-1.5 pl-4 focus-within:border-[var(--color-principal)] transition-all max-w-[600px] mx-auto"
             >
-              <!-- Os filmes em destaque serão inseridos aqui dinamicamente -->
+              <img
+                src="assets/icons/lupa.svg"
+                alt="Lupa"
+                class="w-5 h-5 opacity-40 mr-3 select-none"
+              />
+
+              <input
+                type="text"
+                placeholder="Search movies, directors, genres..."
+                class="w-full bg-transparent border-none text-[var(--color-texto)] placeholder-gray-500 font-medium focus:outline-none pr-4 text-sm md:text-base"
+              />
+
+              <button
+                class="bg-[var(--color-principal)] text-white font-bold px-6 py-2.5 rounded-xl transition-all duration-200 hover:opacity-90 active:scale-95 cursor-pointer text-sm whitespace-nowrap"
+              >
+                Search
+              </button>
             </div>
           </div>
         </section>
@@ -143,6 +177,5 @@
       <footer></footer>
       <script type="module" src="js/main.js"></script>
     </div>
-    
   </body>
 </html>
