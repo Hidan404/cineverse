@@ -13,7 +13,7 @@
       <header
         class="fixed top-0 left-0 w-full h-[64px] flex items-center justify-between bg-[var(--color-background)] text-[var(--color-texto)] px-4 z-50 transition-all duration-300"
         id="header"
-        >
+      >
         <img
           src="assets/icons/cinema-clapperboard-media-svgrepo-com.svg"
           alt="simbolo de cinema"
@@ -90,13 +90,17 @@
         </div>
       </header>
       <main class="pt-[64px]">
-        <div class="hero text-[var(--color-texto)] !ml-0 lg:!ml-8  max-w-[600px] mx-auto lg:mx-0">
+        <div
+          class="hero text-[var(--color-texto)] !ml-0 lg:!ml-8 max-w-[600px] mx-auto lg:mx-0"
+        >
           <h1 class="text-[58px] font-bold !ml-10 lg:!ml-0 !pt-[14rem]">
             Descubra os seus
             <strong class="text-[var(--color-secundaria)]">filmes</strong>
             favoritos
           </h1>
-          <p class="!ml-10 lg:!ml-0  !mt-8 lg:!mt-8 text-[1.4rem] !text-[var(--color-texto-secundario)]">
+          <p
+            class="!ml-10 lg:!ml-0 !mt-8 lg:!mt-8 text-[1.4rem] !text-[var(--color-texto-secundario)]"
+          >
             Explore recomendações selecionadas, redescubra clássicos atemporais
             e descubra joias escondidas — tudo feito sob medida para o seu
             gosto. Cinema sem limites.
@@ -110,7 +114,7 @@
               Explore Filmes →
             </button>
             <button
-              class="w-full max-w-[250px] h-[58px] font-bold flex items-center !justify-center gap-2 bg-[#1C2036]   !rounded-2xl m-auto transition-all duration-300 hover:!opacity-80"
+              class="w-full max-w-[250px] h-[58px] font-bold flex items-center !justify-center gap-2 bg-[#1C2036] !rounded-2xl m-auto transition-all duration-300 hover:!opacity-80"
             >
               <img src="assets/icons/lupa.svg" alt="Lupa" class="w-5 h-5" />
               <span>Procure Filmes</span>
@@ -119,11 +123,19 @@
         </div>
         <section id="feature-movies" class="!mt-20 bg-[#0F172A]">
           <div class="container-movies">
-            <h2 class="text-[var(--color-principal)] text-center font-bold text-[2rem] mt-[15rem]! mb-[3rem]!">Filmes em Destaque</h2>
-            <p class="text-[#F59E0B] text-center mb-[3rem]!">Descubra os melhores filmes selecionados para você</p>
-            <div id="movies-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 w-[90%] !mx-auto my-auto">
+            <h2
+              class="text-[var(--color-principal)] text-center font-bold text-[2rem] mt-[15rem]! mb-[3rem]!"
+            >
+              Filmes em Destaque
+            </h2>
+            <p class="text-[#F59E0B] text-center mb-[3rem]!">
+              Descubra os melhores filmes selecionados para você
+            </p>
+            <div
+              id="movies-grid"
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 w-[90%] !mx-auto my-auto"
+            >
               <!-- Os filmes em destaque serão inseridos aqui dinamicamente -->
-
             </div>
           </div>
         </section>
@@ -131,5 +143,6 @@
       <footer></footer>
       <script type="module" src="js/main.js"></script>
     </div>
+    
   </body>
 </html>
