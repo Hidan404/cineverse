@@ -170,23 +170,79 @@
                 id="search-btn"
                 class="bg-[var(--color-principal)] text-white font-bold px-4! py-4! rounded-xl transition-all duration-200 hover:opacity-90 active:scale-95 cursor-pointer text-sm whitespace-nowrap"
                 type="button"
-                >
+              >
                 Search
               </button>
             </div>
           </div>
-          <div id="search-result" class="ax-w-7xl mx-auto! mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-[3rem]! ml-4! mr-4!">
-
-          </div>
+          <div
+            id="search-result"
+            class="ax-w-7xl mx-auto! mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-[3rem]! ml-4! mr-4! mb-8!"
+          ></div>
         </section>
-        <section id="categories" class="bg-slate-950 text-[var(--color-texto)] py-16">
+        <section
+          id="categories"
+          class="bg-slate-950 text-[var(--color-texto)] py-16"
+        >
           <div class="max-w-7x1 mx-auto px-6">
             <div class="text-center mb-12!">
               <h3 class="text-4xl font-bold mb-4! mt-8!">Categorias</h3>
-              <p class="mb-6! text-slate-400">Explore pelo seu gênero favorito</p>
+              <p class="mb-6! text-slate-400">
+                Explore pelo seu gênero favorito
+              </p>
             </div>
-            <div id="categoriesCards" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto! justify-items-center">
+            <div
+              id="categoriesCards"
+              class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto! justify-items-center mb-8!"
+            ></div>
+          </div>
+        </section>
+        <section id="stats" class="bg-[#0F172A] py-20!">
+          <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-14">
+              <h2 class="text-4xl font-bold text-[#F8FAFC]">
+                CineVerse em números
+              </h2>
 
+              <p class="text-slate-400 mt-3">
+                Informações e recursos disponíveis na plataforma.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+              <div
+                class="bg-[#1E293B] rounded-2xl p-8 text-center border border-slate-700 hover:border-[#2563EB] transition"
+              >
+                <img src="assets/icons/taker.svg" alt="cinema taker">
+                <h3 class="text-4xl font-bold text-[#2563EB]">10+</h3>
+                <p class="text-[#F8FAFC] mt-3">Categorias</p>
+              </div>
+
+              <div
+                class="bg-[#1E293B] rounded-2xl p-8 text-center border border-slate-700 hover:border-[#2563EB] transition"
+              >
+                <img src="assets/icons/star-svgrepo-com.svg" alt="">
+                <h3 class="text-4xl font-bold text-[#2563EB]">IMDb</h3>
+                <p class="text-[#F8FAFC] mt-3">Avaliações em tempo real</p>
+              </div>
+
+              <div
+                class="bg-[#1E293B] rounded-2xl p-8 text-center border border-slate-700 hover:border-[#2563EB] transition"
+              >
+                <div class="text-5xl mb-4">⚡</div>
+                <h3 class="text-4xl font-bold text-[#2563EB]">24h</h3>
+                <p class="text-[#F8FAFC] mt-3">Disponível</p>
+              </div>
+
+              <div
+                class="bg-[#1E293B] rounded-2xl p-8 text-center border border-slate-700 hover:border-[#F59E0B] transition"
+              >
+                <div class="text-5xl mb-4">🆓</div>
+
+                <h3 class="text-4xl font-bold text-[#F59E0B]">100%</h3>
+
+                <p class="text-[#F8FAFC] mt-3">Gratuito</p>
+              </div>
             </div>
           </div>
         </section>
