@@ -11,6 +11,12 @@ export function inicializarProcura() {
 
 async function procurarFilme() {
     const titulo = searchInput.value.trim()
+    searchInput.addEventListener("input", () =>{
+        if(searchInput.value.trim() === ""){
+            result.innerHTML = ""
+        }
+    })
+    
     if (!titulo) {
         return
     }
@@ -24,7 +30,7 @@ async function procurarFilme() {
     result.innerHTML = ""
     if (filmeRetornado.length === 0) {
         result.innerHTML = `
-            <p class="text-center text-red-400">
+            <p class="text-center text-red-400 flex items-center my-auto">
                 Nenhum filme encontrado.
             </p>
         `
@@ -54,6 +60,7 @@ async function procurarFilme() {
                 "translate-y-6"
             )
         })
+        
 
     })
 
