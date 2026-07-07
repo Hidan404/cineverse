@@ -32,4 +32,23 @@ async function getMovie(title) {
     }
 }
 
-export {getMovie}
+async function getMovies(title) {
+    try{
+        const url = `${BASE_URL}?s=${encodeURIComponent(title)}&apikey=${API_KEY}`
+        const resposta = await fetch(url)
+        if(!resposta.ok){
+            throw new Error(`Erro: erro na requisição da consulta ${resposta.status}`)
+        }
+        const dados = await resposta.json()
+
+        if(dados.Response === "False"){
+            throw new Error(dados.error)
+        }
+        return dados.Search
+    }catch(error){
+        console.log(error)
+        return []
+    }
+}
+
+export {getMovie, getMovies}

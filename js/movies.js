@@ -18,7 +18,7 @@ function createCard(movie){
         <p class="!ml-2 text-[var(--color-texto-secundario)] !mb-1">Ano: ${year}</p>
         <p class="!ml-2 text-[var(--color-texto-secundario)] !mb-1">Gênero: ${genre}</p>
         <p class="!ml-2 text-[var(--color-secundaria)] font-semibold !mb-2">Avaliação: ⭐ ${rating}</p>
-        <button class="!py-3 btn-ver-mais mt-auto w-[90%] !mx-auto bg-[var(--color-principal)] hover:opacity-80 text-white font-semibold py-2 rounded-xl text-sm transition-all cursor-pointer">
+        <button class="!py-3 btn-ver-mais mt-auto w-[90%] mx-auto! bg-[var(--color-principal)] hover:opacity-80 text-white font-semibold py-2 rounded-xl text-sm transition-all cursor-pointer">
           Ver Mais
         </button>
     `
@@ -46,4 +46,4 @@ async function renderMovies(titleList){
     
 }
 
-export { renderMovies }
+export { renderMovies, createCard }
