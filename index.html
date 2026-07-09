@@ -200,7 +200,9 @@
         <section id="stats" class="bg-[#0F172A] py-20!">
           <div class="max-w-7xl mx-auto px-6 mx-auto!">
             <div class="text-center mb-14">
-              <h2 class="text-4xl font-bold text-[#F8FAFC] hover:text-[var(--color-texto-secundario)]">
+              <h2
+                class="text-4xl font-bold text-[#F8FAFC] hover:text-[var(--color-texto-secundario)]"
+              >
                 CineVerse em números
               </h2>
 
@@ -209,11 +211,17 @@
               </p>
             </div>
 
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mx-auto! mt-16!">
+            <div
+              class="grid grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mx-auto! mt-16!"
+            >
               <div
                 class="w-full max-w-[250px]! bg-[#1E293B] rounded-2xl p-8 text-center border border-slate-700 hover:border-[#2563EB] transition flex flex-col items-center justify-center gap-4"
               >
-                <img src="assets/icons/taker.svg" alt="cinema taker" class="w-14 h-14 invert lg:w-26 lg:h-26 invert">
+                <img
+                  src="assets/icons/taker.svg"
+                  alt="cinema taker"
+                  class="w-14 h-14 invert lg:w-26 lg:h-26 invert"
+                />
                 <h3 class="text-4xl font-bold text-[#2563EB]">10+</h3>
                 <p class="text-[#F8FAFC] mt-3">Categorias</p>
               </div>
@@ -221,7 +229,11 @@
               <div
                 class="w-full max-w-[250px]! bg-[#1E293B] rounded-2xl p-8 text-center border border-slate-700 hover:border-[#2563EB] transition flex flex-col items-center justify-center gap-4"
               >
-                <img src="assets/icons/star-svgrepo-com.svg" alt="icone star" class="w-14 h-14  lg:w-26 lg:h-26">
+                <img
+                  src="assets/icons/star-svgrepo-com.svg"
+                  alt="icone star"
+                  class="w-14 h-14 lg:w-26 lg:h-26"
+                />
                 <h3 class="text-4xl font-bold text-[#2563EB]">IMDb</h3>
                 <p class="text-[#F8FAFC] mt-3">Avaliações em tempo real</p>
               </div>
@@ -229,7 +241,11 @@
               <div
                 class="w-full max-w-[250px]! bg-[#1E293B] rounded-2xl p-8 text-center border border-slate-700 hover:border-[#2563EB] transition flex flex-col items-center justify-center gap-4"
               >
-                <img src="assets/icons/thunderbolt-simple-icon-by-Vexels.png" alt="Relampago icone" class="w-14 h-14  lg:w-26 lg:h-26">
+                <img
+                  src="assets/icons/thunderbolt-simple-icon-by-Vexels.png"
+                  alt="Relampago icone"
+                  class="w-14 h-14 lg:w-26 lg:h-26"
+                />
                 <h3 class="text-4xl font-bold text-[#2563EB]">24h</h3>
                 <p class="text-[#F8FAFC] mt-3">Disponível</p>
               </div>
@@ -237,10 +253,158 @@
               <div
                 class="w-full max-w-[250px]! bg-[#1E293B] rounded-2xl p-8 text-center border border-slate-700 hover:border-[#F59E0B] transition flex flex-col items-center justify-center gap-4"
               >
-                <img src="assets/icons/free-svgrepo-com.svg" alt="free icone" class="w-14 h-14 invert lg:w-26 lg:h-26">
+                <img
+                  src="assets/icons/free-svgrepo-com.svg"
+                  alt="free icone"
+                  class="w-14 h-14 invert lg:w-26 lg:h-26"
+                />
                 <h3 class="text-4xl font-bold text-[#F59E0B]">100%</h3>
                 <p class="text-[#F8FAFC] mt-3">Gratuito</p>
               </div>
+            </div>
+          </div>
+        </section>
+        <section id="contact" class="bg-[#0F172A] py-20">
+          <div class="max-w-6xl mx-auto px-8">
+            <div class="text-center mb-14">
+              <span
+                class="uppercase tracking-[0.35em] text-[#2563EB] text-sm font-semibold"
+              >
+                Contato
+              </span>
+
+              <h2 class="text-4xl md:text-5xl font-bold text-[#F8FAFC] mt-4">
+                Entre em Contato
+              </h2>
+
+              <p class="text-slate-400 mt-5 max-w-2xl mx-auto">
+                Tem alguma dúvida, sugestão ou encontrou algum problema? Envie
+                uma mensagem. Será um prazer conversar com você.
+              </p>
+            </div>
+            <div
+              class="max-w-4xl mx-auto bg-[#1E293B] border border-slate-700 rounded-3xl p-8 md:p-12 shadow-xl"
+            >
+              <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-sm font-semibold uppercase tracking-wide text-[#F8FAFC] mb-2"
+                    >
+                      Nome
+                    </label>
+
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="Seu nome"
+                      class="w-full rounded-xl bg-[#0F172A] border border-slate-600 px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-semibold uppercase tracking-wide text-[#F8FAFC] mb-2"
+                    >
+                      Email
+                    </label>
+
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="voce@email.com"
+                      class="w-full rounded-xl bg-[#0F172A] border border-slate-600 px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="cep"
+                      class="block text-sm font-semibold uppercase tracking-wide text-[#F8FAFC] mb-2"
+                    >
+                      CEP
+                    </label>
+
+                    <input
+                      id="cep"
+                      type="text"
+                      placeholder="00000-000"
+                      class="w-full rounded-xl bg-[#0F172A] border border-slate-600 px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      for="street"
+                      class="block text-sm font-semibold uppercase tracking-wide text-[#F8FAFC] mb-2"
+                    >
+                      Rua
+                    </label>
+
+                    <input
+                      id="street"
+                      type="text"
+                      placeholder="Rua"
+                      class="w-full rounded-xl bg-[#0F172A] border border-slate-600 px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      for="city"
+                      class="block text-sm font-semibold uppercase tracking-wide text-[#F8FAFC] mb-2"
+                    >
+                      Cidade
+                    </label>
+
+                    <input
+                      id="city"
+                      type="text"
+                      placeholder="Cidade"
+                      class="w-full rounded-xl bg-[#0F172A] border border-slate-600 px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="state"
+                      class="block text-sm font-semibold uppercase tracking-wide text-[#F8FAFC] mb-2"
+                    >
+                      Estado
+                    </label>
+
+                    <input
+                      id="state"
+                      type="text"
+                      placeholder="UF"
+                      class="w-full rounded-xl bg-[#0F172A] border border-slate-600 px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition"
+                    />
+                  </div>
+                </div>
+
+                <div class="mt-6">
+                  <label
+                    for="message"
+                    class="block text-sm font-semibold uppercase tracking-wide text-[#F8FAFC] mb-2"
+                  >
+                    Mensagem
+                  </label>
+
+                  <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Escreva sua mensagem..."
+                    class="w-full resize-none rounded-xl bg-[#0F172A] border border-slate-600 px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition"
+                  ></textarea>
+                </div>
+
+                <!-- Botão -->
+                <button
+                  type="submit"
+                  class="mt-8 w-full bg-[#2563EB] hover:bg-blue-700 text-white font-semibold py-4 rounded-xl transition duration-300"
+                >
+                  Enviar Mensagem
+                </button>
+              </form>
             </div>
           </div>
         </section>
