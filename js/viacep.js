@@ -3,7 +3,7 @@ const ruaInput = document.getElementById("street")
 const cidadeInput = document.getElementById("city")
 const estadoInput = document.getElementById("state")
 const msgErro = document.getElementById("msg-erro")
-const form = document.querySelector("form")
+const form = document.getElementById("contact-form");
 
 
 async function buscarCep(cep) {
@@ -48,9 +48,49 @@ function cepEvento(){
 
 
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
 
-});
 
-export {cepEvento}
+
+form.addEventListener("submit", enviarFormulario)
+
+async function enviarFormulario(event) {
+
+    event.preventDefault()
+
+    const endpoint = "https://formspree.io/f/xrbzkazw"
+
+    const dados = new FormData(form)
+
+    try {
+
+        const response = await fetch(endpoint, {
+            method: "POST",
+            body: dados,
+            headers: {
+                Accept: "application/json"
+            }
+        })
+
+        if (response.ok) {
+
+            alert("Mensagem enviada com sucesso!");
+
+            form.reset()
+
+        } else {
+
+            alert("Erro ao enviar a mensagem.")
+
+        }
+
+    } catch (error) {
+
+        alert("Erro de conexão.")
+
+        console.error(error)
+
+    }
+
+}
+
+export {cepEvento, enviarFormulario}
