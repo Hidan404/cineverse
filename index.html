@@ -273,11 +273,15 @@
                 Contato
               </span>
 
-              <h2 class="text-4xl md:text-5xl font-bold text-[#F8FAFC] mt-8! mb-8!">
+              <h2
+                class="text-4xl md:text-5xl font-bold text-[#F8FAFC] mt-8! mb-8!"
+              >
                 Entre em Contato
               </h2>
 
-              <p class="text-slate-400 mt-5 max-w-2xl mx-auto! text-center mb-12! mt-4! prose">
+              <p
+                class="text-slate-400 mt-5 max-w-2xl mx-auto! text-center mb-12! mt-4! prose"
+              >
                 Tem alguma dúvida, sugestão ou encontrou algum problema? Envie
                 uma mensagem. Será um prazer conversar com você.
               </p>
@@ -317,7 +321,7 @@
                       placeholder="voce@email.com"
                       class="w-full rounded-xl bg-[#0F172A] border border-slate-600 px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition p-1!"
                       name="email"
-                      />
+                    />
                   </div>
                   <div>
                     <label
@@ -333,7 +337,7 @@
                       placeholder="00000-000"
                       class="w-full rounded-xl bg-[#0F172A] border border-slate-600 px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition p-1!"
                       name="cep"
-                      />
+                    />
                   </div>
 
                   <div>
@@ -350,7 +354,7 @@
                       placeholder="Rua"
                       class="w-full rounded-xl bg-[#0F172A] border border-slate-600 px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition p-1!"
                       name="street"
-                      />
+                    />
                   </div>
 
                   <div>
@@ -367,7 +371,7 @@
                       placeholder="Cidade"
                       class="w-full rounded-xl bg-[#0F172A] border border-slate-600 px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition p-1!"
                       name="city"
-                      />
+                    />
                   </div>
                   <div>
                     <label
@@ -382,7 +386,7 @@
                       type="text"
                       placeholder="UF"
                       class="w-full rounded-xl bg-[#0F172A] border border-slate-600 px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition p-1!"
-                      name="state"  
+                      name="state"
                     />
                   </div>
                 </div>
@@ -401,8 +405,7 @@
                     placeholder="Escreva sua mensagem..."
                     class="w-full resize-none rounded-xl bg-[#0F172A] border border-slate-600 px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition p-1!"
                     name="message"
-                    >
-                
+                  >
                   </textarea>
                 </div>
 
@@ -410,12 +413,123 @@
                   type="submit"
                   class="mt-8 w-full bg-[#2563EB] hover:bg-blue-700 text-white font-semibold py-4 rounded-xl transition duration-300 p-1! mt-3!"
                   id="btn-form"
-                  >
+                >
                   Enviar Mensagem
                 </button>
                 <p id="msg-erro"></p>
               </form>
             </div>
+          </div>
+        </section>
+        <section
+          class="w-full bg-gray-900 text-white border-t border-gray-700 margem-footer"
+        >
+          <footer id="footer_" class="container mx-auto! px-4 py-8 md:py-12">
+            <div
+              id="describe-footer"
+              class="grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-12 mx-auto!"
+            >
+              <div
+                class="flex flex-col items-center md:items-start space-y-4 gap-8 mt-[4rem]! ml-[2rem]!"
+              >
+                <div class="flex items-center gap-3">
+                  <img
+                    src="assets/icons/claquete.png"
+                    alt="icone de cinema"
+                    class="w-10 h-10 md:w-12 md:h-12"
+                  />
+                  <span class="text-xl md:text-2xl font-bold tracking-tight">
+                    CineVerse
+                  </span>
+                </div>
+                <div>
+                  <p class="max-w-prose">
+                    Your personal cinema universe. Discover, explore, and fall
+                    in love with movies all over again.
+                  </p>
+                </div>
+                <div id="links-sociais">
+                  <ol class="flex gap-4">
+                    <li>
+                      <a
+                        href="#"
+                        class="block transition-transform hover:scale-110"
+                      >
+                        <img
+                          src="assets/icons/github.png"
+                          alt="icone github"
+                          class="w-10 h-10 md:w-12 md:h-12 invert opacity-80 hover:opacity-100"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block transition-transform hover:scale-110"
+                      >
+                        <img
+                          src="assets/icons/linkedin.png"
+                          alt="icone linkedin"
+                          class="w-10 h-10 md:w-12 md:h-12 invert opacity-80 hover:opacity-100"
+                        />
+                      </a>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <div
+                id="sections"
+                class="flex flex-col items-center md:items-end space-y-4 mt-[4rem]! gap-8 mr-[2rem]!"
+              >
+                <h4
+                  class="text-lg md:text-xl font-semibold uppercase tracking-wider text-gray-400"
+                >
+                  Plataforma
+                </h4>
+                <ol class="space-y-3! text-center md:text-right " id="lista-rodape">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-gray-300 hover:text-white transition-colors hover:underline"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-gray-300 hover:text-white transition-colors hover:underline"
+                    >
+                      Featured Movies
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-gray-300 hover:text-white transition-colors hover:underline"
+                    >
+                      Categories
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-gray-300 hover:text-white transition-colors hover:underline"
+                    >
+                      Search
+                    </a>
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            
+          </footer>
+          <div
+              class="w-full! py-8! mt-8 pt-6 border-t border-gray-700 text-center text-sm text-gray-500"
+          >
+              &copy; 2025 CineVerse. All rights reserved.
           </div>
         </section>
       </main>
