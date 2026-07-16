@@ -20,6 +20,8 @@ const camposObrigatorios = [
 
 
 function adicionarErro(input) {
+    input.classList.remove("border-slate-600");
+
     input.classList.add(
         "border-red-500",
         "focus:border-red-500",
@@ -33,8 +35,9 @@ function removerErro(input) {
         "focus:border-red-500",
         "focus:ring-red-500/30"
     )
-}
 
+    input.classList.add("border-slate-600");
+}
 
 
 async function buscarCep(cep) {
@@ -143,9 +146,13 @@ function validarFormulario() {
 form.addEventListener("submit", enviarFormulario)
 
 async function enviarFormulario(event) {
+    console.log("Submit executou")
     event.preventDefault()
+    console.log(validarFormulario())
     if (!validarFormulario()) {
+        console.log("Formulário inválido")
         return
+
     }
 
     const dados = new FormData(form);
@@ -161,7 +168,7 @@ async function enviarFormulario(event) {
         })
 
         if (response.ok) {
-            alert("Mensagem enviada com sucesso!");
+            alert("Mensagem enviada com sucesso!")
             form.reset()
             msgErro.textContent = ""
             camposObrigatorios.forEach(removerErro)
