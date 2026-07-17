@@ -5,7 +5,11 @@ const hamburgerPath = "M4 6h16M4 12h16M4 18h16"
 const closePath = "M6 18L18 6M6 6l12 12"
 const header = document.getElementById("header")
 
+menuToggle.classList.add("cursor-pointer");
+
 function toggleMenu() {
+    
+    
     menuToggle.addEventListener("click", () =>{
         const eHidden = mobileMenu.classList.contains("hidden")
         if(eHidden){
@@ -15,6 +19,7 @@ function toggleMenu() {
         }else{
             mobileMenu.classList.remove("flex")
             mobileMenu.classList.add('hidden')
+            
             menuIcone.setAttribute('d', hamburgerPath)
         }
     })
