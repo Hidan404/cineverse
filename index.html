@@ -11,11 +11,11 @@
   <body>
     <div class="w-full bg-[var(--color-background)] px-4">
       <header
-        class="fixed top-0 left-0 w-full h-[64px] flex items-center justify-between bg-[var(--color-background)] text-[var(--color-texto)] px-4 z-50 transition-all duration-300"
+        class="mt-3! fixed top-0 left-0 w-full h-[64px] flex items-center justify-between bg-[var(--color-background)] text-[var(--color-texto)] px-4 z-50 transition-all duration-300"
         id="header"
       >
         <img
-          src="assets/icons/cinema-clapperboard-media-svgrepo-com.svg"
+          src="assets/icons/claquete.png"
           alt="simbolo de cinema"
           class="w-12 h-12 !ml-[1.2rem]"
         />
@@ -24,7 +24,7 @@
           <ol class="flex gap-6 font-medium">
             <li class="cursor-pointer hover:opacity-80 transition-all">Home</li>
             <li class="cursor-pointer hover:opacity-80 transition-all">
-              <a href="#featured-movies">Featured Movies</a>
+              <a href="#feature-movies">Featured Movies</a>
             </li>
             <li class="cursor-pointer hover:opacity-80 transition-all">
               <a href="#categories">Categories</a>
@@ -38,11 +38,14 @@
           </ol>
         </nav>
 
-        <button
-          class="hidden md:inline-block !mr-[1.2rem] !px-6 !py-2 !rounded-2xl bg-[var(--color-principal)] transition-all duration-300 hover:!opacity-80 whitespace-nowrap"
-        >
-          Explore Movies →
-        </button>
+        <a href="#feature-movies">
+            <button
+            class="hidden md:inline-block !mr-[1.2rem] !px-6 !py-2 !rounded-2xl bg-[var(--color-principal)] transition-all duration-300 hover:!opacity-80 whitespace-nowrap cursor-pointer"
+            >
+              Explore Movies →
+            </button>
+        </a>
+        
 
         <button
           id="menu-toggle"
@@ -92,7 +95,8 @@
       <main class="pt-[64px]">
         <div
           class="hero text-[var(--color-texto)] !ml-0 lg:!ml-8 max-w-[600px] mx-auto lg:mx-0"
-        >
+           id="about" 
+          >
           <h1 class="text-[58px] font-bold ml-10! lg:!ml-0 pt-[14rem]!">
             Descubra os seus
             <strong class="text-[var(--color-secundaria)]">filmes</strong>
