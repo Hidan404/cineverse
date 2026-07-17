@@ -4,11 +4,13 @@ import { featuredMovies } from "./api.js"
 import { inicializarProcura } from "./search.js"
 import { criarCardCategorias } from "./categoriesCards.js"
 import { cepEvento } from "./viacep.js"
+import { padronizarH2 } from "./Estilotitulos.js"
 toggleMenu()
 renderMovies(featuredMovies)
 inicializarProcura()
 criarCardCategorias()
 cepEvento()
+padronizarH2()
 
 
 
