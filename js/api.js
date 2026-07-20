@@ -11,7 +11,7 @@ export const featuredMovies = [
   "Hellraiser"
 ];
 
-const API_KEY = CONFIG.OMDB_API_KEY
+const API_KEY = typeof CONFIG !== "undefined" ? CONFIG.OMDB_API_KEY : ""
 const BASE_URL = "https://www.omdbapi.com/"
 
 async function getMovie(title) {
