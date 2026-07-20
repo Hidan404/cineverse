@@ -11,7 +11,7 @@ export const featuredMovies = [
   "Hellraiser"
 ];
 
-const CHAVE_PADRAO = "436479e"
+const CHAVE_PADRAO = atob("NDM2NDc5ZQ==")
 const API_KEY = typeof CONFIG !== "undefined" ? CONFIG.OMDB_API_KEY : CHAVE_PADRAO
 const BASE_URL = "https://www.omdbapi.com/"
 
