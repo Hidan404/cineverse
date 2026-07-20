@@ -1,0 +1,25 @@
+name: Deploy para GitHub Pages
+
+on:
+  push:
+    branches: [main, develop]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Injetar config.js com chave ofuscada
+        run: |
+          echo "const CONFIG = {" > js/config.js
+          echo "  OMDB_API_KEY: atob(\"$(echo -n "${{ secrets.OMDBAPIKEY }}" | base64)\")" >> js/config.js
+          echo "}" >> js/config.js
+
+      - name: Deploy para gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
