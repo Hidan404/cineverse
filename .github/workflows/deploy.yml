@@ -12,11 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Injetar config.js com chave ofuscada
+      - name: Injetar chave da API no api.js
         run: |
-          echo "const CONFIG = {" > js/config.js
-          echo "  OMDB_API_KEY: atob(\"$(echo -n "${{ secrets.OMDBAPIKEY }}" | base64)\")" >> js/config.js
-          echo "}" >> js/config.js
+          CHAVE_BASE64=$(echo -n "${{ secrets.OMDBAPIKEY }}" | base64)
+          sed -i "s/CHAVE_PADRAO = \"[^\"]*\"/CHAVE_PADRAO = atob(\"$CHAVE_BASE64\")/" js/api.js
 
       - name: Deploy para gh-pages
         uses: peaceiris/actions-gh-pages@v3
