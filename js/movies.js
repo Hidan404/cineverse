@@ -11,17 +11,33 @@ function createCard(movie){
     const rating = movie.Ratings && movie.Ratings.length > 0 ? movie.Ratings[0].Value : "N/A"
 
     cardd.className = "w-full flex flex-col bg-[#1E293B] rounded-lg p-4 shadow-md hover:shadow-lg hover:-translate-y-2 transition-shadow duration-300 cursor-pointer"
-    
-    cardd.innerHTML = `
-        <img src="${movie.Poster !== "N/A"? movie.Poster:"assets/images/imagem-padrao.jpg"}" alt="${title}" class="w-full h-64 object-cover rounded-lg mb-4 overflow-hidden">
-        <h3 class="!ml-2 text-xl font-bold text-[var(--color-texto)] !mb-2 !mt-4">${title}</h3>
-        <p class="!ml-2 text-[var(--color-texto-secundario)] !mb-1">Ano: ${year}</p>
-        <p class="!ml-2 text-[var(--color-texto-secundario)] !mb-1">Gênero: ${genre}</p>
-        <p class="!ml-2 text-[var(--color-secundaria)] font-semibold !mb-2">Avaliação: ⭐ ${rating}</p>
-        <button class="!py-3 btn-ver-mais mt-auto w-[90%] mx-auto! bg-[var(--color-principal)] hover:opacity-80 text-white font-semibold py-2 rounded-xl text-sm transition-all cursor-pointer">
-          Ver Mais
-        </button>
-    `
+
+    const poster = document.createElement("img")
+    poster.src = movie.Poster !== "N/A" ? movie.Poster : "assets/images/imagem-padrao.jpg"
+    poster.alt = title
+    poster.className = "w-full h-64 object-cover rounded-lg mb-4 overflow-hidden"
+
+    const titleEl = document.createElement("h3")
+    titleEl.className = "!ml-2 text-xl font-bold text-[var(--color-texto)] !mb-2 !mt-4"
+    titleEl.textContent = title
+
+    const yearEl = document.createElement("p")
+    yearEl.className = "!ml-2 text-[var(--color-texto-secundario)] !mb-1"
+    yearEl.textContent = `Ano: ${year}`
+
+    const genreEl = document.createElement("p")
+    genreEl.className = "!ml-2 text-[var(--color-texto-secundario)] !mb-1"
+    genreEl.textContent = `Gênero: ${genre}`
+
+    const ratingEl = document.createElement("p")
+    ratingEl.className = "!ml-2 text-[var(--color-secundaria)] font-semibold !mb-2"
+    ratingEl.textContent = `Avaliação: ⭐ ${rating}`
+
+    const btn = document.createElement("button")
+    btn.className = "!py-3 btn-ver-mais mt-auto w-[90%] mx-auto! bg-[var(--color-principal)] hover:opacity-80 text-white font-semibold py-2 rounded-xl text-sm transition-all cursor-pointer"
+    btn.textContent = "Ver Mais"
+
+    cardd.append(poster, titleEl, yearEl, genreEl, ratingEl, btn)
     return cardd
 }
 
@@ -34,13 +50,17 @@ async function renderMovies(titleList){
     moviesGrid.innerHTML = ""
     const movieReturn = titleList.map(title => getMovie(title))
 
-    const moviesDados = await Promise.all(movieReturn)
-    moviesDados.forEach(movie =>{
-        if(movie){
-            const card = createCard(movie)
-            moviesGrid.appendChild(card)
-        }
-    })
+    try {
+        const moviesDados = await Promise.all(movieReturn)
+        moviesDados.forEach(movie =>{
+            if(movie){
+                const card = createCard(movie)
+                moviesGrid.appendChild(card)
+            }
+        })
+    } catch (error) {
+        moviesGrid.innerHTML = `<p class="text-red-400 text-center col-span-full">Erro ao carregar filmes. Tente novamente mais tarde.</p>`
+    }
 
     
     
