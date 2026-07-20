@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cineverse - Descubra filmes, explore categorias e encontre seu próximo filme favorito." />
+    <meta property="og:title" content="Cineverse" />
+    <meta property="og:description" content="Descubra filmes, explore categorias e encontre seu próximo filme favorito." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hidan404.github.io/cineverse/" />
+    <meta property="og:image" content="https://hidan404.github.io/cineverse/assets/icons/cinema-clapperboard-media-svgrepo-com.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cineverse" />
+    <meta name="twitter:description" content="Descubra filmes, explore categorias e encontre seu próximo filme favorito." />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/cinema-clapperboard-media-svgrepo-com.svg" />
+    <link rel="apple-touch-icon" href="assets/icons/cinema-clapperboard-media-svgrepo-com.svg" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/global.css" />
+    <title>Cineverse</title>
+  </head>
+  <body>
+    <div class="w-full bg-[var(--color-background)] px-4">
+      <header
+        class="mt-3! fixed top-0 left-0 w-full h-[64px] flex items-center justify-between bg-[var(--color-background)] text-[var(--color-texto)] px-4 z-50 transition-all duration-300"
+        id="header"
+      >
+        <img
+          src="assets/icons/claquete.png"
+          alt="simbolo de cinema"
+          class="w-12 h-12 !ml-[1.2rem]"
+        />
+
+        <nav class="hidden md:flex items-center gap-6">
+          <ol class="flex gap-6 font-medium">
+            <li class="cursor-pointer hover:opacity-80 transition-all">Home</li>
+            <li class="cursor-pointer hover:opacity-80 transition-all">
+              <a href="#feature-movies">Featured Movies</a>
+            </li>
+            <li class="cursor-pointer hover:opacity-80 transition-all">
+              <a href="#categories">Categories</a>
+            </li>
+            <li class="cursor-pointer hover:opacity-80 transition-all">
+              <a href="#about">About</a>
+            </li>
+            <li class="cursor-pointer hover:opacity-80 transition-all">
+              <a href="#contact">Contact</a>
+            </li>
+          </ol>
+        </nav>
+
+        <a href="#feature-movies">
+            <button
+            class="hidden md:inline-block !mr-[1.2rem] !px-6 !py-2 !rounded-2xl bg-[var(--color-principal)] transition-all duration-300 hover:!opacity-80 whitespace-nowrap cursor-pointer"
+            >
+              Explore Movies →
+            </button>
+        </a>
+        
+
+        <button
+          id="menu-toggle"
+          class="block md:hidden p-1 hover:opacity-70 transition-all focus:outline-none"
+          aria-label="Abrir menu"
+        >
+          <svg class="w-8 h-8 stroke-current" fill="none" viewBox="0 0 24 24">
+            <path
+              id="menu-icon"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+        <div
+          id="mobile-menu"
+          class="hidden absolute top-[64px] left-0 w-full bg-[var] border-t border-gray-700/20 flex-col p-6 gap-6 shadow-xl md:hidden"
+        >
+          <nav>
+            <ol class="flex flex-col gap-4 font-medium text-lg text-center">
+              <li class="cursor-pointer hover:opacity-80 transition-all">
+                <a href="">Home</a>
+              </li>
+              <li class="cursor-pointer hover:opacity-80 transition-all">
+                <a href="#featured-movies">Featured Movies</a>
+              </li>
+              <li class="cursor-pointer hover:opacity-80 transition-all">
+                <a href="#categories">Categories</a>
+              </li>
+              <li class="cursor-pointer hover:opacity-80 transition-all">
+                <a href="#about">About</a>
+              </li>
+              <li class="cursor-pointer hover:opacity-80 transition-all">
+                <a href="#contact">Contact</a>
+              </li>
+            </ol>
+          </nav>
+          <button
+            class="w-full max-w-[200px] bg-[var(--color-principal)] !py-2 !m-auto !mb-4 rounded-2xl transition-all duration-300 hover:!opacity-80 text-center font-medium"
+          >
+            Explore Movies →
+          </button>
+        </div>
+      </header>
+      <main class="pt-[64px]">
+        <div
+          class="hero text-[var(--color-texto)] !ml-0 lg:!ml-8 max-w-[600px] mx-auto lg:mx-0"
+           id="about" 
+          >
+          <h1 class="text-[58px] font-bold ml-10! lg:!ml-0 pt-[14rem]!">
+            Descubra os seus
+            <strong class="text-[var(--color-secundaria)]">filmes</strong>
+            favoritos
+          </h1>
+          <p
+            class="!ml-10 lg:!ml-0 !mt-8 lg:!mt-8 text-[1.4rem] !text-[var(--color-texto-secundario)]"
+          >
+            Explore recomendações selecionadas, redescubra clássicos atemporais
+            e descubra joias escondidas — tudo feito sob medida para o seu
+            gosto. Cinema sem limites.
+          </p>
+          <div
+            class="botoes w-auto flex flex-row flex-wrap justify-center lg:!justify-start gap-5 lg:gap-8 !mt-12 w-full items-center"
+          >
+            <button
+              class="w-full max-w-[250px] h-[58px] font-bold bg-[var(--color-principal)] !px-6 !py-2 !rounded-2xl transition-all duration-300 hover:!opacity-80"
+            >
+              Explore Filmes →
+            </button>
+            <button
+              class="w-full max-w-[250px] h-[58px] font-bold flex items-center !justify-center gap-2 bg-[#1C2036] !rounded-2xl m-auto transition-all duration-300 hover:!opacity-80"
+            >
+              <img src="assets/icons/lupa.svg" alt="Lupa" class="w-5 h-5" />
+              <span>Procure Filmes</span>
+            </button>
+          </div>
+        </div>
+        <section id="feature-movies" class="!mt-20 bg-[#0F172A]">
+          <div class="container-movies">
+            <h2
+              class="text-[var(--color-principal)] text-center font-bold text-[2rem] mt-[15rem]! mb-[3rem]!"
+            >
+              Filmes em Destaque
+            </h2>
+            <p class="text-[#F59E0B] text-center mb-[3rem]!">
+              Descubra os melhores filmes selecionados para você
+            </p>
+            <div
+              id="movies-grid"
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 w-[90%] !mx-auto my-auto"
+            ></div>
+          </div>
+        </section>
+        <section id="search-movies" class="mb-6!">
+          <div
+            id="search"
+            class="w-full max-w-2xl flex flex-col justify-center items-center text-[var(--color-texto)] !mt-34 text-center !mx-auto"
+          >
+            <h2 class="text-[3rem] font-bold !mb-12 !mt-4">
+              Encontre qualquer Filme
+            </h2>
+            <p class="mb-[3rem]!">
+              Pesquise instantaneamente em nosso banco de dados com milhares de
+              filmes.
+            </p>
+
+            <div
+              class="camp-search w-[90%] flex items-center bg-[#1E293B] border border-gray-700/40 rounded-2xl p-0.4! pl-2! focus-within:border-[var(--color-principal)] transition-all max-w-[600px] mx-auto"
+            >
+             
+
+              <input
+                id="search-input"
+                type="text"
+                placeholder="Search movies, directors, genres..."
+                class="w-full bg-transparent border-none text-[var(--color-texto)] placeholder-gray-500 font-medium focus:outline-none pr-4! text-sm md:text-base"
+              />
+
+              <button
+                id="search-btn"
+                class="bg-[var(--color-principal)] text-white font-bold px-4! py-4! rounded-xl transition-all duration-200 hover:opacity-90 active:scale-95 cursor-pointer text-sm whitespace-nowrap"
+                type="button"
+              >
+                <img src="assets/images/lupa.png" alt="imagem de uam lupa" class="w-8 h-8 invert">
+              </button>
+            </div>
+          </div>
+          <div
+            id="search-result"
+            class="ax-w-7xl mx-auto! mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-[3rem]! ml-4! mr-4! mb-8!"
+          ></div>
+        </section>
+        <section
+          id="categories"
+          class="bg-slate-950 text-[var(--color-texto)] py-16"
+        >
+          <div class="max-w-7x1 mx-auto px-6">
+            <div class="text-center mb-12!">
+              <h3 class="text-4xl font-bold mb-4! mt-8!">Categorias</h3>
+              <p class="mb-6! text-slate-400">
+                Explore pelo seu gênero favorito
+              </p>
+            </div>
+            <div
+              id="categoriesCards"
+              class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto! justify-items-center mb-8!"
+            ></div>
+          </div>
+        </section>
+        <section id="stats" class="bg-[#0F172A] py-20!">
+          <div class="max-w-7xl mx-auto px-6 mx-auto!">
+            <div class="text-center mb-14">
+              <h2
+                class="text-4xl font-bold text-[#F8FAFC] hover:text-[var(--color-texto-secundario)]"
+              >
+                CineVerse em números
+              </h2>
+
+              <p class="text-slate-400 mt-3!">
+                Informações e recursos disponíveis na plataforma.
+              </p>
+            </div>
+
+            <div
+              class="grid grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mx-auto! mt-16!"
+            >
+              <div
+                class="w-full max-w-[250px]! bg-[#1E293B] rounded-2xl p-8 text-center border border-slate-700 hover:border-[#2563EB] transition flex flex-col items-center justify-center gap-4"
+              >
+                <img
+                  src="assets/icons/taker.svg"
+                  alt="cinema taker"
+                  class="w-14 h-14 invert lg:w-26 lg:h-26 invert"
+                />
+                <h3 class="text-4xl font-bold text-[#2563EB]">10+</h3>
+                <p class="text-[#F8FAFC] mt-3">Categorias</p>
+              </div>
+
+              <div
+                class="w-full max-w-[250px]! bg-[#1E293B] rounded-2xl p-8 text-center border border-slate-700 hover:border-[#2563EB] transition flex flex-col items-center justify-center gap-4"
+              >
+                <img
+                  src="assets/icons/star-svgrepo-com.svg"
+                  alt="icone star"
+                  class="w-14 h-14 lg:w-26 lg:h-26"
+                />
+                <h3 class="text-4xl font-bold text-[#2563EB]">IMDb</h3>
+                <p class="text-[#F8FAFC] mt-3">Avaliações em tempo real</p>
+              </div>
+
+              <div
+                class="w-full max-w-[250px]! bg-[#1E293B] rounded-2xl p-8 text-center border border-slate-700 hover:border-[#2563EB] transition flex flex-col items-center justify-center gap-4"
+              >
+                <img
+                  src="assets/icons/thunderbolt-simple-icon-by-Vexels.png"
+                  alt="Relampago icone"
+                  class="w-14 h-14 lg:w-26 lg:h-26"
+                />
+                <h3 class="text-4xl font-bold text-[#2563EB]">24h</h3>
+                <p class="text-[#F8FAFC] mt-3">Disponível</p>
+              </div>
+
+              <div
+                class="w-full max-w-[250px]! bg-[#1E293B] rounded-2xl p-8 text-center border border-slate-700 hover:border-[#F59E0B] transition flex flex-col items-center justify-center gap-4"
+              >
+                <img
+                  src="assets/icons/free-svgrepo-com.svg"
+                  alt="free icone"
+                  class="w-14 h-14 invert lg:w-26 lg:h-26"
+                />
+                <h3 class="text-4xl font-bold text-[#F59E0B]">100%</h3>
+                <p class="text-[#F8FAFC] mt-3">Gratuito</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contact" class="bg-[#0F172A] py-20">
+          <div class="max-w-6xl mx-auto! px-8 flex flex-col">
+            <div class="text-center mb-14">
+              <span
+                class="uppercase tracking-[0.35em] text-[#2563EB] text-sm font-semibold"
+              >
+                Contato
+              </span>
+
+              <h2
+                class="text-4xl md:text-5xl font-bold text-[#F8FAFC] mt-8! mb-8!"
+              >
+                Entre em Contato
+              </h2>
+
+              <p
+                class="text-slate-400 mt-5 max-w-2xl mx-auto! text-center mb-12! mt-4! prose"
+              >
+                Tem alguma dúvida, sugestão ou encontrou algum problema? Envie
+                uma mensagem. Será um prazer conversar com você.
+              </p>
+            </div>
+            <div
+              class="max-w-4xl mx-auto bg-[#1E293B] border border-slate-700 rounded-3xl p-8 md:p-12 shadow-xl mx-auto!"
+            >
+              <form class="p-6!  max-w-[420px] lg:max-w-none px-4! md:px-0!" id="contact-form">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4!">
+                  <div class="gap-4!">
+                    <label
+                      for="name"
+                      class="block text-sm font-semibold uppercase tracking-wide text-[#F8FAFC] mb-2 p-1!"
+                    >
+                      Nome
+                    </label>
+
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="Seu nome"
+                      class="w-full rounded-xl bg-[#0F172A] border border-slate-600 pl-4! pr-4! px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition p-1!"
+                      name="name"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-semibold uppercase tracking-wide text-[#F8FAFC] mb-2 p-1!"
+                    >
+                      Email
+                    </label>
+
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="voce@email.com"
+                      class="w-full rounded-xl bg-[#0F172A] border border-slate-600 pl-4! pr-4! px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition p-1!"
+                      name="email"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="cep"
+                      class="block text-sm font-semibold uppercase tracking-wide text-[#F8FAFC] mb-2 p-1!"
+                    >
+                      CEP
+                    </label>
+
+                    <input
+                      id="cep"
+                      type="text"
+                      placeholder="00000-000"
+                      class="w-full rounded-xl bg-[#0F172A] border border-slate-600 pl-4! pr-4! px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition p-1!"
+                      name="cep"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      for="street"
+                      class="block text-sm font-semibold uppercase tracking-wide text-[#F8FAFC] mb-2 p-1!"
+                    >
+                      Rua
+                    </label>
+
+                    <input
+                      id="street"
+                      type="text"
+                      placeholder="Rua"
+                      class="w-full rounded-xl bg-[#0F172A] border border-slate-600 pl-4! pr-4! px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition p-1!"
+                      name="street"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      for="city"
+                      class="block text-sm font-semibold uppercase tracking-wide text-[#F8FAFC] mb-2 p-1!"
+                    >
+                      Cidade
+                    </label>
+
+                    <input
+                      id="city"
+                      type="text"
+                      placeholder="Cidade"
+                      class="w-full rounded-xl bg-[#0F172A] border border-slate-600 pl-4! pr-4! px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition p-1!"
+                      name="city"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="state"
+                      class="block text-sm font-semibold uppercase tracking-wide text-[#F8FAFC] mb-2 p-1!"
+                    >
+                      Estado
+                    </label>
+
+                    <input
+                      id="state"
+                      type="text"
+                      placeholder="UF"
+                      class="w-full rounded-xl bg-[#0F172A] border border-slate-600 pl-4! pr-4! px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition p-1!"
+                      name="state"
+                    />
+                  </div>
+                </div>
+
+                <div class="mt-6 mx-auto!">
+                  <label
+                    for="message"
+                    class="block text-sm font-semibold uppercase tracking-wide text-[#F8FAFC] mb-2! p-1! text-center"
+                  >
+                    Mensagem
+                  </label>
+
+                  <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Escreva sua mensagem..."
+                    class="block w-[95%] mx-auto! resize-none rounded-xl bg-[#0F172A] border border-slate-600 pl-4! pr-4! px-5 py-4 text-[#F8FAFC] placeholder-slate-500 outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 transition p-1!"
+                    name="message"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="mt-8 block w-[95%] mx-auto! bg-[#2563EB] hover:bg-blue-700 text-white font-semibold py-4 rounded-xl transition duration-300 p-3! mt-3!"
+                  id="btn-form"
+                >
+                  Enviar Mensagem
+                </button>
+                <p id="msg-erro" class="text-center"></p>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section
+          class="w-full bg-gray-900 text-white border-t border-gray-700 margem-footer"
+        >
+          <footer id="footer_" class="container mx-auto! px-4 py-8 md:py-12">
+            <div
+              id="describe-footer"
+              class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mx-auto!"
+            >
+              <div
+                class="flex flex-col items-center md:items-start space-y-4 gap-8 mt-[4rem]! lg:ml-[2rem]!"
+              >
+                <div class="flex items-center gap-3">
+                  <img
+                    src="assets/icons/claquete.png"
+                    alt="icone de cinema"
+                    class="w-10 h-10 md:w-12 md:h-12"
+                  />
+                  <span class="text-xl md:text-2xl font-bold tracking-tight">
+                    CineVerse
+                  </span>
+                </div>
+                <div>
+                  <p class="w-4/5 sm:max-w-[200px] md:max-w-[300px] mx-auto! md:mx-0! text-center md:text-left">
+                    Your personal cinema universe. Discover, explore, and fall
+                    in love with movies all over again.
+                  </p>
+                </div>
+                <div id="links-sociais">
+                  <ol class="flex gap-4">
+                    <li>
+                      <a
+                        href="https://github.com/Hidan404/cineverse.git"
+                        class="block transition-transform hover:scale-110"
+                        target="_blank"
+                        >
+                        <img
+                          src="assets/icons/github.png"
+                          alt="icone github"
+                          class="w-10 h-10 md:w-12 md:h-12 invert opacity-80 hover:opacity-100"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/ronaldousadev"
+                        class="block transition-transform hover:scale-110"
+                        target="_blank"
+                        >
+                        <img
+                          src="assets/icons/linkedin.png"
+                          alt="icone linkedin"
+                          class="w-10 h-10 md:w-12 md:h-12 invert opacity-80 hover:opacity-100"
+                        />
+                      </a>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <div
+                id="sections"
+                class="flex flex-col items-center md:items-end space-y-4 mt-0! sm:mt-[4rem]! gap-8 mr-0! sm:mr-[2rem]!"
+              >
+                <h4
+                  class="text-lg md:text-xl font-semibold uppercase tracking-wider text-gray-400"
+                >
+                  Plataforma
+                </h4>
+                <ol class="space-y-3! text-center md:text-right " id="lista-rodape">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-gray-300 hover:text-white transition-colors hover:underline"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-gray-300 hover:text-white transition-colors hover:underline"
+                    >
+                      Featured Movies
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-gray-300 hover:text-white transition-colors hover:underline"
+                    >
+                      Categories
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-gray-300 hover:text-white transition-colors hover:underline "
+                    >
+                      Search
+                    </a>
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            
+          </footer>
+          <div
+              class="w-full! py-8! mt-8 pt-6 border-t border-gray-700 text-center text-sm text-gray-500 mt-0! lg:mt-[2rem]!"
+          >
+              &copy; 2025 CineVerse. All rights reserved.
+          </div>
+        </section>
+      </main>
+      <footer></footer>
+      <script src="js/config.js"></script>
+      <script type="module" src="js/main.js"></script>
+    </div>
+  </body>
+</html>
